@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-4</title>
+</head>
+<body>
+    <input type="button" onclick="compare()"
+           value="innerHTML과 textContent 속성의 동작 차이"><br><br>
+    <b style="font-size: 1.1em; color: blue">요소의 내용을 읽어오는 경우</b><br>
+    <p><b>* 읽어올 요소 내용</b></p>
+    <pre>&lt;mark&gt;요소 내용 접근을 위한 속성:
+        &lt;b&gt;innerHTML&lt;/b&gt;과 &lt;b&gt;textContent&lt;/b&gt;&lt;/mark&gt;</pre>
+    <!-- 읽어올 내용 -->
+    <p id="msg"><mark>요소 내용 접근을 위한 속성:
+        <b>innerHTML</b>과 <b>textContent</b></mark></p>
+    <b>읽어온 결과는 경고창으로 확인 가능</b>
+    <br><hr>
+    <b style="font-size: 1.1em; color: blue">요소 내용을 지정하는 경우</b><br>
+    <p><b>* 두 속성의 값으로 지정할 내용</b></p>
+    <pre>&lt;p&gt;&lt;i&gt;테스트는 기울여서, 이미지 추가&lt;img src='love.gif'&gt;&lt;/i&gt;&lt;/p&gt;</pre>
+    <div>
+        <b>1. innerHTML 속성으로 지정한 결과 --></b> <div id="put_inner"></div>
+        <b>2. textContent 속성으로 지정한 결과 --></b> <div id="put_text"></div>
+    </div>
+    <script>
+        function compare() {
+            // 저장할 내용
+            let newMsg = "<p><i>텍스트는 기울여서, 이미지 추가 <img src='love.gif' height='20px'></i></p>";
+            let x = document.getElementById("msg").innerHTML;
+            let y = document.getElementById("msg").textContent;
+            x = "innerHTML 속성으로 읽은 내용: " + x;
+            y = "textContent 속성으로 읽은 내용: " + y;
+            alert(x); alert(y);
+            document.getElementById("put_inner").innerHTML = newMsg;
+            document.getElementById("put_text").textContent = newMsg;
+        }
+    </script>
+</body>
+</html>

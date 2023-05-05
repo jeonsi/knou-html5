@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-5</title>
+</head>
+<body>
+    <p>이미지 위에 마우스를 위치시켜 보세요!</p>
+    <img id="image" src="flower.jpg" height="100"
+         onmouseover="changeSize(300)" onmouseout="changeSize(100)">
+    <script>
+        function changeSize(imgHeight) {
+            document.getElementById("image").height = imgHeight;
+        }
+    </script>
+</body>
+</html>

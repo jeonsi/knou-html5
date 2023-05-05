@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-6</title>
+</head>
+<body>
+    <script>
+        function changeStyle() {
+            let myDiv = document.getElementById("main");
+            myDiv.style.backgroundColor = "yellow";
+            // style 객체의 cssText 속성을 사용하면
+            // myDiv.style.cssText = "background-color: yellow";와 같이
+            // CSS 속성 표현을 그대로 사용해서 스타일 지정이 가능
+            myDiv.style.color = "blue";
+            myDiv.style.fontStyle = "italic";
+            myDiv.style.fontWeight = "bold";
+            myDiv.style.fontSize = "25px";
+            myDiv.style.border = "3px dashed red";
+        }
+    </script>
+
+    <div id="main">
+        <p>버튼을 누르면 요소의 스타일이 변경됩니다.</p>
+    </div><br>
+    <input type="button" value="스타일 변경" onclick="changeStyle()">
+</body>
+</html>
