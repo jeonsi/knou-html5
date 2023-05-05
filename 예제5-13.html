@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-13</title>
+    <script>
+        let timerID;
+        function show(n) {
+            if (n < 1) {
+                clearTimeout(timerID);
+                //location.replace("url") - 현재 문서를 다른 URL 문서로 바꿔 줌
+                location.replace("예제5-13a.html");
+            } else {
+                myArea = document.getElementById("myArea");
+                myArea.innerHTML = (n + "초 후에 새 문서가 표시됩니다.");
+                myArea.style.backgroundColor = "yellow";
+                myArea.style.color = "blue";
+                myArea.style.fontWeight = "bold";
+                myArea.style.fontSize = "30pt";
+                timerID = setTimeout("show(" + (n - 1) + ")", 1000)
+            }
+        }
+    </script>
+</head>
+<body onload="show(10);">
+    <span id="myArea"></span>
+</body>
+</html>

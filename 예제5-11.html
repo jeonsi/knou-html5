@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-11</title>
+</head>
+<body>
+    <p>영상을 클릭하면 새 창으로 큰 크기의 영상을 보고 2초 후에는 자동으로 원래 창으로 돌아옵니다.</p>
+    <img src="flower.jpg" onclick="bigImage()" width="150">
+    <script>
+        function bigImage() {
+            window.open("예제5-11a.html", "");
+        }
+    </script>
+</body>
+</html>

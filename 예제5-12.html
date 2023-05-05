@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-12</title>
+</head>
+<body onload="displayTime()">
+    <div id="clock"></div>
+    <script>
+        function displayTime() {
+            today = new Date();
+            today = today.toLocaleString();
+            let clock = document.getElementById("clock");
+            clock.style.backgroundColor = "yellow";
+            clock.style.color = "blue";
+            clock.style.fontWeight = "bold";
+            clock.innerHTML = today;
+            setTimeout("displayTime()", 1000);
+        }
+    </script>
+</body>
+</html>

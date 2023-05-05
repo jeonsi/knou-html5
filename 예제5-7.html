@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-7</title>
+</head>
+<body>
+    <input type="button" value="요소 추가" onclick="addElements()"><br><hr>
+    <div id="myDiv"></div>
+    <script>
+        function addElements() {
+            // 새로운 p 요소를 추가(텍스트 노드를 갖는 경우)
+            let newP = document.createElement("p");
+            newP.innerHTML = "<b>동적으로 추가되는 p 요소 입니다.</b>";
+            newP.style.color = "white";
+            newP.style.backgroundColor = "blue";
+            document.getElementById("myDiv").appendChild(newP);
+
+            // 새로운 img 요소를 추가(속성 노드를 갖는 경우)
+            let newImg = document.createElement("img");
+            newImg.setAttribute("src", "flower.jpg");
+            newImg.setAttribute("height", "100");
+            document.getElementById("myDiv").appendChild(newImg);
+        }
+    </script>
+</body>
+</html>

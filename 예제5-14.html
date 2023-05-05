@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-14</title>
+</head>
+<body onload="showTime()">
+    <div id="clock"></div><br>
+    <script>
+        let timerID;
+        let clock = document.getElementById("clock");
+        function showTime() {
+            clock.style.backgroundColor = "yellow";
+            clock.style.color = "blue";
+            clock.style.fontWeight = "bond";
+            clock.style.fontSize = "30pt";
+            timerID = setInterval( function() {
+                today = new Date();
+                clock.innerHTML = today.toLocaleString();
+            }, 1000);
+        }
+        clock.addEventListener("click", function() {
+            clearInterval(timerID);
+        })
+    </script>
+</body>
+</html>
