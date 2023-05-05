@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제5-3</title>
+    <style>
+        .bgcolor {width: 300px; height: 30px; background: yellow;}
+    </style>
+</head>
+<body>
+    <h3 class="bgcolor">클래스명을 이용한 요소 접근</h3>
+    <p class="bgcolor">사용 메서드:</p>
+    <div class="bgcolor">getElementsByClassName()</div>
+    <script>
+        let myClass = document.getElementsByClassName("bgcolor");
+        document.write("<br/><hr><b>동일한 class명을 사용하는 요소의 내용:</b>");
+        document.write("<ul>");
+        for (let i = 0; i < myClass.length; i++) {
+            document.write("<li>" + myClass[i].innerHTML + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>
